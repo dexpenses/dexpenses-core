@@ -1,4 +1,5 @@
 export default interface Address {
-  city?: string;
-  street?: string;
+  city?: string | null;
+  street?: string | null;
+  zip?: string | null;
 }
