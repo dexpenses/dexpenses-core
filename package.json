@@ -1,0 +1,46 @@
+{
+  "name": "@dexpenses/core",
+  "description": "Dexpenses models and shared utilities",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "author": {
+    "name": "Henrik Drefs",
+    "url": "https://github.com/dexmo007"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dexmo007/dexpenses-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dexmo007/dexpenses-core/issues"
+  },
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "tslint --force --project tsconfig.json",
+    "lint:sonar": "yarn lint --format json --out .sonar/tslint-report.json",
+    "build": "tsc",
+    "test": "jest",
+    "test:coverage": "jest --silent --coverage --collect-coverage-from=src/**",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint"
+  },
+  "devDependencies": {
+    "@types/google__maps": "^0.5.5",
+    "@types/jest": "^24.0.13",
+    "@types/luxon": "^1.13.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-microsoft-contrib": "^6.1.0",
+    "tslint-sonarts": "^1.9.0",
+    "typescript": "^3.4.2"
+  },
+  "dependencies": {},
+  "files": [
+    "lib/**/*"
+  ]
+}
