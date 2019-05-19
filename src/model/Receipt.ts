@@ -9,12 +9,23 @@ export interface Timestamp {
 
 export default interface Receipt {
   header?: string[];
-  time?: Time;
-  phone?: string;
-  paymentMethod?: string;
-  date?: Date | Timestamp;
-  amount?: Amount;
-  address?: Address;
-  timestamp?: Date;
-  place?: GeocodingResult & PlaceDetailsResult;
+  time?: Time | null;
+  phone?: string | null;
+  paymentMethod?: string | null;
+  date?: Date | Timestamp | null;
+  amount?: Amount | null;
+  address?: Address | null;
+  timestamp?: Date | null;
+  place?: (GeocodingResult & PlaceDetailsResult) | null;
+}
+
+export default class Receipt {
+  static getDate(receipt: Receipt): Date | undefined | null {
+    if (!receipt.date) {
+      return receipt.date;
+    }
+    return (receipt.date as Timestamp).toDate
+      ? (receipt.date as Timestamp).toDate()
+      : (receipt.date as Date);
+  }
 }
