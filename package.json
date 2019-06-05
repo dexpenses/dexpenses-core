@@ -20,7 +20,7 @@
   "scripts": {
     "lint": "tslint --force --project tsconfig.json",
     "lint:sonar": "yarn lint --format json --out .sonar/tslint-report.json",
-    "build": "tsc",
+    "build": "rimraf lib/ && tsc",
     "test": "jest",
     "test:coverage": "jest --silent --coverage --collect-coverage-from=src/**",
     "prepare": "yarn build",
@@ -30,14 +30,15 @@
   "devDependencies": {
     "@types/google__maps": "^0.5.5",
     "@types/jest": "^24.0.13",
-    "@types/luxon": "^1.13.0",
+    "@types/luxon": "^1.15.1",
     "jest": "^24.8.0",
+    "rimraf": "^2.6.3",
     "ts-jest": "^24.0.2",
-    "tslint": "^5.15.0",
+    "tslint": "^5.17.0",
     "tslint-eslint-rules": "^5.4.0",
-    "tslint-microsoft-contrib": "^6.1.0",
+    "tslint-microsoft-contrib": "^6.2.0",
     "tslint-sonarts": "^1.9.0",
-    "typescript": "^3.4.2"
+    "typescript": "^3.5.1"
   },
   "dependencies": {},
   "files": [
