@@ -1,7 +1,7 @@
 {
   "name": "@dexpenses/core",
   "description": "Dexpenses models and shared utilities",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": {
