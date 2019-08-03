@@ -7,11 +7,28 @@ export interface Timestamp {
   toDate(): Date;
 }
 
+export type PaymentMethod =
+  | 'DEBIT'
+  | 'CREDIT'
+  | 'CASH'
+  | 'DKV_CARD'
+  | 'PAYPAL'
+  | 'ONLINE';
+
+export const paymentMethods: PaymentMethod[] = [
+  'DEBIT',
+  'CREDIT',
+  'CASH',
+  'DKV_CARD',
+  'PAYPAL',
+  'ONLINE',
+];
+
 export default interface Receipt {
   header?: string[];
   time?: Time | null;
   phone?: string | null;
-  paymentMethod?: string | null;
+  paymentMethod?: PaymentMethod | null;
   date?: Date | Timestamp | null;
   amount?: Amount | null;
   address?: Address | null;
