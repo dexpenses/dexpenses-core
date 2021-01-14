@@ -353,9 +353,9 @@
     jest-diff "^24.3.0"
 
 "@types/luxon@^1.15.2":
-  version "1.21.0"
-  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-1.21.0.tgz#db792d29f535d49522cb6d94dd9da053efc950a1"
-  integrity sha512-Zhrf65tpjOlVIYrUhX9eu1VzRo8iixQDLFPbfqFxPpG4pBTNNPZ2BFhYE0IAsDfW9GWg+RcrUqiLwrGJH4rq4w==
+  version "1.25.1"
+  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-1.25.1.tgz#9f33aead0c7fdb86434059410c7a712517d97cd8"
+  integrity sha512-enkMO4WJcbdkhK1eZrItF616buau02wtrSN+DDt9Qj9U23boSAXNJm0fMlgwpTDaRHq3S0D/SPIRbxy4YxBjiA==
 
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
